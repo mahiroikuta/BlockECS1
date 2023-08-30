@@ -6,5 +6,7 @@ using UnityEngine;
 public class GameState
 {
     public GameObject ball;
-    public GameObject block;
+    public GameObject blockPrefab;
+    [System.NonSerialized]
+    public bool isMoving = false;
 }

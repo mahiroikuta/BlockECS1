@@ -11,16 +11,17 @@ public class GameMain : MonoBehaviour
     public BlockSystem blockSystem;
     public PlayerSystem playerSystem;
 
-    GameObject _ball;
+    GameObject ball;
 
-    void Init()
+    void Start()
     {
-        ballSystem.Init();
-        blockSystem.Init();
-        playerSystem.Init();
+        Debug.Log("#####");
+        ballSystem.Init(_gameState);
+        blockSystem.Init(_gameState);
+        playerSystem.Init(_gameState);
     }
 
-    void OnUpdate()
+    void Update()
     {
         ballSystem.OnUpdate();
         blockSystem.OnUpdate();

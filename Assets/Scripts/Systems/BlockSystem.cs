@@ -5,12 +5,13 @@ using UnityEngine;
 public class BlockSystem : MonoBehaviour
 {
     List<GameObject> blocks;
-    void Init()
+    GameState _gameState;
+    public void Init(GameState gameState)
     {
-        
+        _gameState = gameState;
     }
 
-    void OnUpdate()
+    public void OnUpdate()
     {
         
     }

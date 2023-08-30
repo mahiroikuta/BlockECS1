@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PlayerSystem : MonoBehaviour
 {
-    void Init()
+    GameState _gameState;
+    public void Init(GameState gameState)
     {
-        
+        _gameState = gameState;
     }
 
-    void OnUpdate()
+    public void OnUpdate()
     {
-        
+        MovePlayer();
+    }
+
+    void MovePlayer()
+    {
+
     }
 }
