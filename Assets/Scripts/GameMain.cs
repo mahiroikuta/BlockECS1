@@ -6,6 +6,8 @@ public class GameMain : MonoBehaviour
 {
     [SerializeField]
     GameState _gameState;
+    [SerializeField]
+    GameEvent _gameEvent;
 
     public BallSystem ballSystem;
     public BlockSystem blockSystem;
@@ -15,10 +17,9 @@ public class GameMain : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("#####");
-        ballSystem.Init(_gameState);
-        blockSystem.Init(_gameState);
-        playerSystem.Init(_gameState);
+        ballSystem.Init(_gameState, _gameEvent);
+        blockSystem.Init(_gameState, _gameEvent);
+        playerSystem.Init(_gameState, _gameEvent);
     }
 
     void Update()
