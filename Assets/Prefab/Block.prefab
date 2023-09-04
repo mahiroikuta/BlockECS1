@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4227364484573319483}
   - component: {fileID: 4227364484573319482}
   - component: {fileID: 1480044444818292265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +109,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  timeCount: 0
-  interval: 5
-  height: 1.5

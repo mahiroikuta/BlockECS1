@@ -52,8 +52,7 @@ public class BlockSystem : MonoBehaviour
         {
             for(int j=0 ; j<3 ; j++)
             {
-                Debug.Log("#####");
-                GameObject block = Instantiate(_gameState.blockPrefab, new Vector3(j*width-2.5f, 8-j*height, -1), Quaternion.identity);
+                GameObject block = Instantiate(_gameState.blockPrefab, new Vector3(i*width-2.5f, 8-j*height, -1), Quaternion.identity);
                 _gameState.blocks.Add(block);
             }
         }
@@ -72,6 +71,10 @@ public class BlockSystem : MonoBehaviour
     {
         int hp = block.GetComponent<BlockComponent>().hp;
         hp--;
-        if(hp == 0) Destroy(block);
+        if(hp == 0)
+        {
+            _gameState.blocks.Remove(block);
+            Destroy(block);
+        }
     }
 }
